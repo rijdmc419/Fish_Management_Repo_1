@@ -1,0 +1,95 @@
+<style type="text/css">
+			body {
+				background: black;
+				color: white;
+				font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+				margin: 0; this coool
+				padding: 0;
+			}
+
+			header {
+				background: rgb(255, 187, 0);
+				padding: 20px;
+				text-shadow: 20px; FIX!!!!
+				text-shadow-color: white; 
+			}
+ 
+ 			#buttons {
+				background: white;
+				text-align: center;
+				color: green;
+				padding: 50px;
+				display: flex;
+				flex-direction: row;
+			}
+
+			#buttonShape{
+				background: rgb(188, 164, 191);
+				margin: auto;
+				width: 100px;
+				height: 20px;
+				border-top-right-radius: 5px; 
+				border-top-left-radius: 5px;
+				border-bottom-right-radius: 5px;
+				border-bottom-left-radius: 5px;
+			}
+
+			ul{
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+			}
+
+			li{
+				display: inline-block;
+				margin-right: 20px;
+
+			}
+
+			footer {
+				background: rgb(255, 187, 0);
+				padding: 10px 20px;
+			}
+
+/*Dropdown formatting */
+
+			.dropbtn {
+			  background-color: #3498DB;
+			  color: white;
+			  padding: 16px;
+			  font-size: 16px;
+			  border: none;
+			  cursor: pointer;
+			}
+
+			.dropbtn:hover, .dropbtn:focus {
+			  background-color: #2980B9;
+			}
+
+			.dropdown {
+			  position: relative;
+			  display: inline-block;
+			}
+
+			.dropdown-content {
+			  display: none;
+			  position: absolute;
+			  background-color: #f1f1f1;
+			  min-width: 160px;
+			  overflow: auto;
+			  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			  z-index: 1;
+			}
+
+			.dropdown-content a {
+			  color: black;
+			  padding: 12px 16px;
+			  text-decoration: none;
+			  display: block;
+			}
+
+			.dropdown a:hover {background-color: #ddd;}
+
+			.show {display: block;}
+
+		</style>

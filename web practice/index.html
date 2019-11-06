@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Coding?</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+		<title>"Fishy website!</title>
+	<body>
+		<header>
+
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="locations.html">About</a></li>
+					<li><a href="contacts.html">Contacts</a></li>
+				</ul>
+			</nav>
+
+			<h1> <img src="https://www.critfc.org/wp-content/uploads/2015/11/CRITFC-logo.png" alt="CRITFC-logo"  width="147" height="136.5" align="middle"> Columbia River Inter-Tribal Fish Commission</h1>
+
+		</header>
+		
+		<section id="buttons">
+			<div id="buttonShape">YAY</div>
+			<div id="buttonShape">BOOP</div>
+			<div id="buttonShape">OOP</div>
+		</section>
+		
+		<section>lower-section</section>		
+		
+		<footer>
+			<div class="dropdown">
+			  <button onclick="myFunction()" class="dropbtn">Links</button>
+			  <div id="myDropdown" class="dropdown-content">
+			    <a href="https://critfc.org/wp-content/uploads/2014/06/sanitation-checklist-full-page.pdf" target="_blank">Sanitation Checklist</a>
+			    <a href="#about">About</a>
+			    <a href="#contact">Contact</a>
+			  </div>
+			</div>
+		</footer>
+
+		<script>
+		/* When the user clicks on the button, 
+		toggle between hiding and showing the dropdown content */
+		function myFunction() {
+		  document.getElementById("myDropdown").classList.toggle("show");
+		}
+
+		// Close the dropdown if the user clicks outside of it
+		window.onclick = function(event) {
+		  if (!event.target.matches('.dropbtn')) {
+		    var dropdowns = document.getElementsByClassName("dropdown-content");
+		    var i;
+		    for (i = 0; i < dropdowns.length; i++) {
+		      var openDropdown = dropdowns[i];
+		      if (openDropdown.classList.contains('show')) {
+		        openDropdown.classList.remove('show');
+		      }
+		    }
+		  }
+		}
+		</script>
+
+	</body>
+</html>
