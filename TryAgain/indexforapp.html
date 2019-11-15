@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"> 
+		<title>Firebase Web Database</title>
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+	     https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-analytics.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-database.js"></script>
+	</head>
+	<body>
+			
+			<!--Value-->
+			<pre id="object">
+
+			</pre>
+		<form>
+    		FishType:
+   			<input type="text" size="12" id="fishtype" /><br />
+    		<input type="submit" onclick="return saveUn();" />
+		</form>
+			<h1 id="category"> </h1>
+			<h1 id="weight"> </h1>
+		<script src="app.js"></script>
+		
+
+	</body>
+</html>
