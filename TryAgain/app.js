@@ -60,3 +60,11 @@ function saveUn() {
     alert(Fishtype);
     return false;
 }
+
+
+function NewEntry() {
+	
+
+
+	
+}
