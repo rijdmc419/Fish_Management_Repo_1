@@ -33,7 +33,7 @@
 	   }
 	});
 
-
+	CategoryRef.push();
 	
 	dbFishtype.on('value', snap => { 
 		Fishtype.innerText = JSON.stringify(snap.val(), null, 3);
@@ -62,9 +62,43 @@ function saveUn() {
 }
 
 
-function NewEntry() {
-	
+function NewSanitationForm() {
+			//date function
+
+	// Get a database reference
+	const database = firebase.database();
+
+	// creating a starting path in our database
+	const ref = database.ref('SanitationForm');
+
+	// create a child node of the above path and write the following data to it
+	const usersRef = ref.child('users');
+	usersRef.push().set({
+	  alanisawesome: {
+	    date_of_birth: 'June 23, 1912',
+	    full_name: 'Alan Turing',
+	  },
+	  gracehop: {
+	    date_of_birth: 'December 9, 1906',
+	    full_name: 'Grace Hopper',
+	  },
+	});
+	alert("Key");
 
 
-	
+
+
+	// const formListRef = 0;
+	// var newSanitationRef;
+	// newSanitationRef = firebase.database().ref().child("SanitationForm");
+	// newSanitationRef.push();
+	// newSanitationRef.update({
+	// 	Boat: null,
+	// 	FishBox: null,
+	// 	Water: null,
+	// 	Ice: null
+	// });
+	// //newSanitationRef = firebase.database().ref().child("SanitationForm");
+
+	// return firebase.database().ref().update(SanitationForm);
 }
