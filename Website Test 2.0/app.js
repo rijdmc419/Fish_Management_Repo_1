@@ -35,6 +35,8 @@
 	//add log in events
 	btnLogin.addEventListener("click", e =>
 	{
+		  e.preventDefault();
+
 		const email = txtEmail.value;
 		const pass = txtPassword;
 		const auth = firebase.auth();
