@@ -55,13 +55,13 @@
 ui.start('#firebaseui-auth-container', uiConfig);
 
 	
-	// const txtEmail = document.getElementById("txtEmail");
-	// const txtPassword = document.getElementById("txtPassword");
+	 const txtEmail = document.getElementById("txtEmail");
+	const txtPassword = document.getElementById("txtPassword");
 	// const btnLogin = document.getElementById("btnLogin");
 	// const btnSignUp = document.getElementById("btnSignUp");
 	// const btnLogout = document.getElementById("btnLogout");
 	
-	// //add log in events
+	//add log in events
 	// btnLogin.onEvent("click", e =>
 	// {
 	// 	alert(txtEmail);
@@ -75,14 +75,14 @@ ui.start('#firebaseui-auth-container', uiConfig);
 	// 	 promise.catch(e => console.log(e.message));
 	// });
 
-	// //add sign up events
+	//add sign up events
 	// btnSignUp.addEventListener('click', e=>
 	// {
 	// 	const email = txtEmail.value;
 	// 	const pass = txtPassword;
 	// 	const auth = firebase.auth();
 
-	// 	alert(email);
+	// 	alert("email");
 
 	// 	//create log in
 	// 	//I need to assign user id here -> ask rij for more info
@@ -128,9 +128,16 @@ ui.start('#firebaseui-auth-container', uiConfig);
 // 		alert(email);
 // 	});
 
-// function myFunction() {
-// 	//document.getElementById("txtEmail").innerHTML = "Hello World";
-// 	alert("whatup!");
+function myFunction() {
+	//document.getElementById("txtEmail").innerHTML = "Hello World";
+	// const txtEmail = document.getElementById("txtEmail");
+	// const pass = txtPassword;
+	 const auth = firebase.auth();
 
+	alert(txtEmail.value);
+	//create log in
+	//I need to assign user id here -> ask rij for more info
+	const promise = auth.createUserWithEmailAndPassword(txtEmail.value, txtPassword.value);
+	promise.catch(e => console.log(e.message));
 
-// }
+}
