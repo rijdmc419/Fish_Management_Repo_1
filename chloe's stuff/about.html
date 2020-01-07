@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Coding?</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	
+	<body>
+		<header>
+			<img src="https://www.critfc.org/wp-content/uploads/2015/11/CRITFC-logo.png" alt="CRITFC-logo"  width="147" height="136.5" align="middle"> <b>About</b>
+		</header>
+
+		<nav class="navClass">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="contacts.html">Contacts</a></li>				
+				<li style="float:right"><a href="about.html">About</a></li>
+				
+			<div class="dropdown">
+				  <button onclick="myFunction1()" class="dropbtn">Links<button>
+				  <div id="Dropdown1" class="dropdown-content">
+				    <a href="https://critfc.org/wp-contentuploads/2014/06/sanitation-checklist-full-page.pdf"target="_blank">Sanitation Checklist</a>
+				    <a href="https://www.critfc.org/"target="_blank"website</a>
+				    <a href="#contact">Contact</a>
+				  </div>
+			</div>
+				
+			<div class="dropdown">
+					<button onclick="myFunction2()" class="dropbtn">2<button>
+					<div id="Dropdown2" class="dropdown-content">
+					  <a href="https://critfc.org/wp-contentuploads/2014/06/sanitation-checklist-full-page.pdf target="_blank">Sanitation Checklist</a>
+					  <a href="#about">cos</a>
+					  <a href="#contact">bob</a>
+					</div>
+			</div>
+			</ul>
+		</nav>
+
+		<section id="section">
+			<div id="sectionShape">YAY</div>
+			<div id="sectionShape">BOOP</div>
+			<div id="sectionShape">BOP</div>
+		</section>
+
+		<footer>footer</footer>
+
+		
+		<script>
+		/* When the user clicks on the button, 
+		toggle between hiding and showing the dropdown content */
+		function myFunction1() {
+		  	document.getElementById("Dropdown1").classList.toggle("show");
+		}
+
+		function myFunction2() {
+			document.getElementById("Dropdown2").classList.toggle("show");
+		}
+
+		// Close the dropdown if the user clicks outside of it
+		window.onclick = function(event) {
+		  if (!event.target.matches('.dropbtn')) {
+		    var dropdowns = document.getElementsByClassName("dropdown-content");
+		    var i;
+		    for (i = 0; i < dropdowns.length; i++) {
+		      var openDropdown = dropdowns[i];
+		      if (openDropdown.classList.contains('show')) {
+		        openDropdown.classList.remove('show');
+		      }
+		    }
+		  }
+		}
+		</script>
+
+	</body>
+</html>
