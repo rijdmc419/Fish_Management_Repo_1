@@ -71,12 +71,51 @@ function NewSanitationForm() {
 	// creating a starting path in our database
 	const ref = database.ref('SanitationForm');
 
+
+	const boatCheck = document.getElementById('boatCheck');
+	const fishboxCheck = document.getElementById('fishboxCheck');
+	const waterCheck = document.getElementById('waterCheck');
+	const iceCheck = document.getElementById('iceCheck');
+	const knivesCheck = document.getElementById('knivesCheck');
+	const truckCheck = document.getElementById('truckCheck');
+	const clothesCheck = document.getElementById('clothesCheck');
+	const glovesCheck = document.getElementById('glovesCheck');
+	const packagingCheck = document.getElementById('packagingCheck');
+	const fishinggearCheck = document.getElementById('gearCheck');
+
+
+
 	// create a child node of the above path and write the following data to it
-	const usersRef = ref.child('users');
-	usersRef.push().set({
+	const form = ref.child('form');
+
+	if (boatCheck.checked == true){
+		form.set({
+			boat: 'true'
+		});
+	}
+	else (){
+		form.set({
+			boat: 'false'
+		});
+	}
+
+	form.push().set({
+		//user id
+	    boat: 'June 23, 1912',
+	    fishbox: 'Alan Turing',
+	    water: 'yes',
+	    ice: 'yes',
+	    knives: 'yes',
+	    truck: 'yes',
+	    clothes: 'yes',
+	    gloves: 'yes',
+	    packaging: 'yes',
+	    fishinggear: 'yes',
+	    
 	  alanisawesome: {
-	    date_of_birth: 'June 23, 1912',
-	    full_name: 'Alan Turing',
+	  	//user id
+	    boat: 'June 23, 1912',
+	    fishbox: 'Alan Turing',
 	  },
 	  gracehop: {
 	    date_of_birth: 'December 9, 1906',
