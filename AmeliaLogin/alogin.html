@@ -2,7 +2,7 @@
 <head>
 	<title>Log in</title>
 
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
 
  	<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-analytics.js"></script>
@@ -12,8 +12,9 @@
 <!-- 	<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script>
 
  -->
+ 	<script type="text/javascript" src="amelia.js"></script>
 
-<script type="text/javascript" src="amelia.js"></script>
+
 
 </head>
 <body>
@@ -25,22 +26,90 @@
 		<input id = "txtEmail" type = "email" placeholder = "email"/>
 		<input id = "txtPassword" type = "password" placeholder = "Password"/>
 		
-		<button id = "btnLogin" onclick = "myFunction()">
+		<button id = "btnLogin" onclick="signInFunction()" >
 			Log in
 		</button>
-		<button id = "btnSignup" class ="btn btn-secondary">
+		<button id = "btnSignup" onclick = "signUpFunction()">
 			Sign Up
 		</button>
 		<button id = "btnLogout" class = "btn btn-action hide">
 			Log out
 		</button> 
 	</div>
-<!-- 
+
+
 	<script>
-		function myFunction() {
-			alert(txtEmail.value);
-		}
-	</script> -->
+		
+		// (function()
+		// {
+		// 	  const firebaseConfig = {
+		//     apiKey: "AIzaSyBCCd1qrmXMeYSo7__h6yYb0jQoUKzNOIU",
+		//     authDomain: "database-practice-ce4a5.firebaseapp.com",
+		//     databaseURL: "https://database-practice-ce4a5.firebaseio.com",
+		//     projectId: "database-practice-ce4a5",
+		//     storageBucket: "database-practice-ce4a5.appspot.com",
+		//     messagingSenderId: "82256684482",
+		//     appId: "1:82256684482:web:dee0d56871a13f1602a25b",
+		//     measurementId: "G-5W2FY8STNZ"
+		//  	 };
+		//   	// Initialize Firebase
+		//   	firebase.initializeApp(firebaseConfig);
+		//   	firebase.analytics();
+		// 	var firebase = require('firebase');
+		// 	var firebaseui = require('firebaseui');
+		// 	var ui = new firebaseui.auth.AuthUI(firebase.auth());
+
+		// 	// ui.start('#firebaseui-auth-container', {
+		// 	//   	signInOptions: [
+		// 	//     firebase.auth.EmailAuthProvider.PROVIDER_ID
+		// 	//   	],
+		//  //  // Other config options...
+		// 	// });
+
+		// 	var uiConfig = {
+		//   callbacks: {
+		//     signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+		//       // User successfully signed in.
+		//       // Return type determines whether we continue the redirect automatically
+		//       // or whether we leave that to developer to handle.
+		//       return true;
+		//     },
+		//     uiShown: function() {
+		//       // The widget is rendered.
+		//       // Hide the loader.
+		//       document.getElementById('loader').style.display = 'none';
+		//     }
+		//   },
+		//   // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+		//   signInFlow: 'popup',
+		//   signInSuccessUrl: '<url-to-redirect-to-on-success>',
+		//   signInOptions: [
+		//     // Leave the lines as is for the providers you want to offer your users.
+		//     firebase.auth.EmailAuthProvider.PROVIDER_ID,
+		//   ],
+		//   // Terms of service url.
+		//   tosUrl: '<your-tos-url>',
+		//   // Privacy policy url.
+		//   privacyPolicyUrl: '<your-privacy-policy-url>'
+		// };
+
+		// ui.start('#firebaseui-auth-container', uiConfig);
+		// });
+
+		// function myFunction() {
+		// 	//document.getElementById("txtEmail").innerHTML = "Hello World";
+		// 	//const txtEmail = document.getElementById("txtEmail");
+		// 	// const pass = txtPassword;
+		// 	// const auth = firebase.auth();
+
+		// 	alert("aaaaaa");
+		// 	//create log in
+		// 	//I need to assign user id here -> ask rij for more info
+		// 	const promise = auth.createUserWithEmailAndPassword(txtEmail.value, txtPassword.value);
+		// 	promise.catch(e => console.log(e.message));
+
+		// }
+	</script>
 
 		
 	
