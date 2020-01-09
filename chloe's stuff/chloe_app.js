@@ -35,16 +35,16 @@
 
 	CategoryRef.push();
 	
-	dbFishtype.on('value', snap => { 
-		Fishtype.innerText = JSON.stringify(snap.val(), null, 3);
-	});
+	// dbFishtype.on('value', snap => { 
+	// 	Fishtype.innerText = JSON.stringify(snap.val(), null, 3);
+	// });
 	
 
-	 //dbRefObject.on('value', snap => {
-		//preObject.innerText = JSON.stringify(snap.val(), null, 3);
-	//}); console.log(snap.val()));
+	//  //dbRefObject.on('value', snap => {
+	// 	//preObject.innerText = JSON.stringify(snap.val(), null, 3);
+	// //}); console.log(snap.val()));
 
-	dbFishtype.on('value', snap=> Fishtype.innerText = snap.val());
+	// dbFishtype.on('value', snap=> Fishtype.innerText = snap.val());
 
 }());
 
@@ -82,45 +82,117 @@ function NewSanitationForm() {
 	const glovesCheck = document.getElementById('glovesCheck');
 	const packagingCheck = document.getElementById('packagingCheck');
 	const fishinggearCheck = document.getElementById('gearCheck');
+	var Boat = "0";
+	var Fishbox = "0";
+	var Water = "0";
+	var Ice = "0";
+	var Knives = "0";
+	var Truck = "0";
+	var Clothes = "0";
+	var Gloves = "0";
+	var Packaging = "0";
+	var Gear = "0";
 
 
 
 	// create a child node of the above path and write the following data to it
 	const form = ref.child('form');
 
+	// form.push().set({
+	// 		userid: "111"
+
+	// });
+
 	if (boatCheck.checked == true){
-		form.set({
-			boat: 'true'
-		});
+		Boat = "true";
+		// form.set({
+		// 	boat: 'true'
+		// });
 	}
-	else (){
-		form.set({
-			boat: 'false'
-		});
+	else {
+		Boat = "false";
+		// form.set({
+		// 	boat: 'false'
+		// });
 	}
+	if (fishboxCheck.checked == true){
+		Fishbox = 'true';
+	}
+	else {
+		Fishbox = 'false';
+	}
+	if (waterCheck.checked == true){
+			Water = 'true';
+	}
+	else {
+		Water = 'false';
+	}
+	if (iceCheck.checked == true){
+		Ice = 'true';
+	}
+	else {
+		Ice = 'false';
+	}
+	if (knivesCheck.checked == true){
+		Knives = 'true';
+	}
+	else {
+		Knives = 'false';
+	}
+	if (truckCheck.checked == true){
+		Truck = 'true';
+	}
+	else {
+		Truck = 'false';
+	}
+	if (clothesCheck.checked == true){
+		Clothes = 'true';
+	}
+	else {
+		Clothes = 'false';
+	}
+	if (glovesCheck.checked == true){
+		Gloves = "true";
+	}
+	else {
+		Gloves = "false";
+	}
+	if (packagingCheck.checked == true){
+		Packaging = 'true';
+	}
+	else {
+		Packaging = 'false';
+	}
+	if (gearCheck.checked == true){
+		Gear = 'true';
+	}
+	else {
+		Gear = 'false';
+	}
+	
 
 	form.push().set({
 		//user id
-	    boat: 'June 23, 1912',
-	    fishbox: 'Alan Turing',
-	    water: 'yes',
-	    ice: 'yes',
-	    knives: 'yes',
-	    truck: 'yes',
-	    clothes: 'yes',
-	    gloves: 'yes',
-	    packaging: 'yes',
-	    fishinggear: 'yes',
+	    boat: Boat,
+	    fishbox: Fishbox,
+	    water: Water,
+	    ice: Ice,
+	    knives: Knives,
+	    truck: Truck,
+	    clothes: Clothes,
+	    gloves: Gloves,
+	    packaging: Packaging,
+	    fishinggear: Gear
 	    
-	  alanisawesome: {
-	  	//user id
-	    boat: 'June 23, 1912',
-	    fishbox: 'Alan Turing',
-	  },
-	  gracehop: {
-	    date_of_birth: 'December 9, 1906',
-	    full_name: 'Grace Hopper',
-	  },
+	  // alanisawesome: {
+	  // 	//user id
+	  //   boat: 'June 23, 1912',
+	  //   fishbox: 'Alan Turing',
+	  // },
+	  // gracehop: {
+	  //   date_of_birth: 'December 9, 1906',
+	  //   full_name: 'Grace Hopper',
+	  // },
 	});
 	alert("Key");
 

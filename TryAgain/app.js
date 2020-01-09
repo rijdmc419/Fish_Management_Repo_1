@@ -93,7 +93,7 @@ function NewSanitationForm() {
 			boat: 'true'
 		});
 	}
-	else (){
+	else{
 		form.set({
 			boat: 'false'
 		});
