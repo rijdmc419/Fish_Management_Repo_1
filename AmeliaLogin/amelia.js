@@ -154,10 +154,13 @@ function signUpFunction() {
 		// Handle Errors here.
   		var errorCode = error.code;
 	  	var errorMessage = error.message;
+	  	alert(errorCode);
+	  	alert(errorMessage);
+
 	  // ...
 	});
 
-	alert(txtEmail.value);
+	//alert(txtEmail.value);
 	//create log in
 	//I need to assign user id here -> ask rij for more info
 	// const promise = auth.createUserWithEmailAndPassword(txtEmail.value, txtPassword.value);
@@ -167,5 +170,32 @@ function signUpFunction() {
 
 function signInFunction()
 {
-	alert(txtPassword.value);
+	const firebaseConfig = {
+    apiKey: "AIzaSyBCCd1qrmXMeYSo7__h6yYb0jQoUKzNOIU",
+    authDomain: "database-practice-ce4a5.firebaseapp.com",
+    databaseURL: "https://database-practice-ce4a5.firebaseio.com",
+    projectId: "database-practice-ce4a5",
+    storageBucket: "database-practice-ce4a5.appspot.com",
+    messagingSenderId: "82256684482",
+    appId: "1:82256684482:web:dee0d56871a13f1602a25b",
+    measurementId: "G-5W2FY8STNZ"
+ 	 };
+  	// Initialize Firebase
+  	firebase.initializeApp(firebaseConfig);
+  	firebase.analytics();
+
+
+
+	firebase.auth().signInWithEmailAndPassword(txtEmail.value, txtPassword.value).catch(function(error) {
+	  // Handle Errors here.
+	  var errorCode = error.code;
+	  var errorMessage = error.message;
+	  // ...
+	  alert(errorCode);
+	  alert(errorMessage);
+
+
+	});
+	  //location.replace("amy_NewPageTest.html");
+
 }
